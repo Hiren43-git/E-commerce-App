@@ -66,8 +66,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 final conPassword = provider.conPasswordController.text;
                 try {
                   if (password == conPassword) {
-                    await authService.signUpWithEmailAndPassword(
-                        email, password);
+                    authService.signUpWithEmailAndPassword(email, password);
                     LoginBottomSheet.showSuccessBottomSheet(context);
                   }
                   print('--------------');
